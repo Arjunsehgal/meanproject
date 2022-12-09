@@ -1,0 +1,86 @@
+
+<section class="Singup-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+              <div class="login-box">
+                  <h1>User Registration</h1>
+                  <div class="alert alert-success" *ngIf="datasaved">
+                     {{message}}
+                  </div> 
+                  <div class="alert alert-danger" *ngIf="dataerror">
+                    {{error}}
+                 </div> 
+                  <form [formGroup]="regForm">    <!--(ngsubmit)="onSubmit1(regForm.value)"-->
+                      
+                      <div class="form-group form-row">
+                          <label class="col-md-3">Name : <span class="required">*</span></label>
+                          <div class="col-md-9">
+                            <input type="text" formControlName="Name" class="form-control" placeholder="Name" required="">
+                            <!-- <span *ngIf="!regForm.get('Name').valid &amp;&amp; regForm.get('Name').touched">Please enter Your Name !!!</span> -->
+                            <!-- <div *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="Password.errors?.['required']">
+                                Password is required.
+                            </div>
+                            <div *ngIf="Password.errors?.['minlength']">
+                                Password must be at least 6 characters long.
+                            </div>
+                            <div *ngIf="Password.errors?.['forbiddenName']">
+                                Password cannot be Bob.
+                            </div>
+                            </div> -->
+                          </div>
+                      </div>
+                  
+                      <div class="form-group form-row">
+                          <label class="col-md-3">Email ID <span class="required">*</span></label>
+                          <div class="col-md-9">
+                            <input type="text" formControlName="Email" class="form-control" placeholder="Email Id" required="">
+                            <!-- <span *ngIf="!regForm.get('Email').valid &amp;&amp; regForm.get('Email').touched">Please enter Email !!!</span> -->
+                            <!-- <div *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="Password.errors?.['required']">
+                                Password is required.
+                            </div>
+                            <div *ngIf="Password.errors?.['minlength']">
+                                Password must be at least 6 characters long.
+                            </div>
+                            <div *ngIf="Password.errors?.['forbiddenName']">
+                                Password cannot be Bob.
+                            </div>
+                            </div> -->
+                          </div>
+                      </div>
+                      <div class="form-group form-row">
+                          <label class="col-md-3">Password <span class="required">*</span></label>
+                          <div class="col-md-9">
+                            <input type="password" formControlName="Password" id="Password" class="form-control" placeholder="Password" required="">
+                            <!-- <span *ngIf="!regFormControl.Password.valid &amp;&amp; regFormControl.Password.touched">Please enter Password !!!</span> -->
+                            <br>
+                            <div *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+                                class="alert alert-danger">
+                            <div *ngIf="Password.errors?.['required']">
+                                Password is required.
+                            </div>
+                            <div *ngIf="Password.errors?.['minlength']">
+                                Password must be at least 6 characters long.
+                            </div>
+                            <div *ngIf="Password.errors?.['forbiddenName']">
+                                Password cannot be Bob.
+                            </div>
+                            </div>
+                          </div>
+                      </div>
+                  
+                      <br>
+                      <div class="form-group">
+                          <button type="submit" [disabled]="regForm.invalid" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                      </div>
+                  </form>
+              </div>         
+          </div>
+        </div>
+       
+    </div>
+  </section>

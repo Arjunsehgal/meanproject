@@ -1,0 +1,42 @@
+.nav-link{
+    color:#fff;
+}
+.navbar{
+    height:60px;
+}
+.active {
+    color: #fff ;
+    border-bottom: 2px solid #fff ;
+
+}
+
+
+
+
+
+
+.dropdown-menu.show {
+    display: block;
+    border: 1px solid var(--text-heading-color) ;
+    z-index: 300;
+  }
+  .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 2.5em;
+    margin-bottom: 0.125rem;
+  }
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--text-heading-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  
+  }

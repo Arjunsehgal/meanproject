@@ -1,0 +1,34 @@
+<div class="nav-item dropdown dropdown-center">
+<a type="button" style="font-size: 16px;" class="nav-link dropdown-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+              data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <i style="font-size :25px;margin-left:16px;" class="bi bi-paint-bucket"></i> 
+        </a>
+<ul class="dropdown-menu">
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show" type="radio" name="greentheme"
+                [(ngModel)]="result" id="exampleRadios2" value="greentheme"
+                (change)="onChangeTheme($event)" checked>
+            <label class="form-check-label" for="exampleRadios2">
+                Green Theme 
+            </label>
+        </div>
+    </li>
+    <li>
+        <hr class="dropdown-divider">
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input " data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show" type="radio" [(ngModel)]="result"
+                name="bluetheme" id="exampleRadios2" value="bluetheme" (change)="onChangeTheme($event)"
+                checked>
+            <label class="form-check-label" for="exampleRadios2">
+                Blue Theme
+            </label>
+        </div>
+    </li>
+    <!-- </li> -->
+</ul>
+</div>

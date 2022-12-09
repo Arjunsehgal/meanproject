@@ -1,0 +1,23 @@
+input.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+input.ng-touched.ng-valid{
+    border: 2px solid green;
+}
+.error{
+    color: red;
+    font-family:'Times New Roman', Times, serif
+    
+}
+.container{
+    background-image: url('../../../assets/images/logingril.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-box {
+    box-shadow: 1px 1px 7px #666;
+    padding: 20px;
+    margin-top: 10%;
+    background: white;
+}

@@ -1,0 +1,80 @@
+<nav style="background-color:#712cf9;color:#fff" class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color:#fff" href="/">Angular Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" style="color:#fff" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" style="color:#fff" routerLink="/about-us" routerLinkActive="active">About US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" style="color:#fff" routerLink="/article" routerLinkActive="active">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" style="color:#fff" routerLink="/contact-us" routerLinkActive="active">Contact US</a>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown dropdown-center">
+                <a type="button" style="font-size: 16px;" class="nav-link dropdown-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                              data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                              <i style="font-size :25px;margin-left:16px;" class="bi bi-paint-bucket"></i> 
+                        </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" data-bs-toggle="collapse"
+                                data-bs-target=".navbar-collapse.show" type="radio" name="whitetheme"
+                                [(ngModel)]="result" id="exampleRadios2" value="whitetheme"
+                                (change)="onChangeTheme($event)" checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                                White Theme 
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input " data-bs-toggle="collapse"
+                                data-bs-target=".navbar-collapse.show" type="radio" [(ngModel)]="result"
+                                name="blacktheme" id="exampleRadios2" value="blacktheme" (change)="onChangeTheme($event)"
+                                checked>
+                            <label class="form-check-label" for="exampleRadios2">
+                                Black Theme
+                            </label>
+                        </div>
+                    </li>
+                    <!-- </li> -->
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a style="color:#fff" class="nav-link" aria-current="page" href="#"><i style="font-size:25px;margin:0 10px;" class="bi bi-youtube"></i></a>
+              </li>
+              <li class="nav-item">
+                <a style="color:#fff" class="nav-link" aria-current="page" href="#"><i style="font-size:25px;margin:0 10px;" class="bi bi-github"></i></a>
+              </li>
+              <li class="nav-item" *ngIf="!isloggedin">
+                <a type="button" class="btn" style="color:#fff;font-size: 20px;" class="nav-link" aria-current="page" routerLink="/login" routerLinkActive="active">Login</a>
+              </li>
+              <li class="nav-item" *ngIf="!isloggedin">
+                <a type="button" class="btn" style="color:#fff;font-size: 20px;" class="nav-link" aria-current="page" routerLink="/register" routerLinkActive="active">SignUp</a>
+              </li>
+              <li class="nav-item" *ngIf="isloggedin">
+                <a type="button" class="btn btn-outline-danger nav-link" style="color:#fff;font-size: 20px;margin-top: 3px;" aria-current="page" (click)="onLogout()">Logout</a>  
+              </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
